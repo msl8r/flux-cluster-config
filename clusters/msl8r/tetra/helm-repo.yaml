@@ -5,5 +5,5 @@ metadata:
   name: tetra
   namespace: tetra
 spec:
-  interval: 5m0s
+  interval: 0m30s
   url: https://helm.cilium.io
