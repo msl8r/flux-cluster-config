@@ -4,5 +4,6 @@ metadata:
   name: tetra
 namespace: tetra
 resources:
+  - namespace.yaml
   - helm-repo.yaml
   - tetra.yaml
