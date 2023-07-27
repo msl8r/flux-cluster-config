@@ -18,3 +18,4 @@ spec:
       interval: 1m
   values:
     replicaCount: 2
+    enablePolicyFilter: "true"
