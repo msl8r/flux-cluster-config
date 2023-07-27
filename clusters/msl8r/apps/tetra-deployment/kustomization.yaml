@@ -1,7 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
-  name: msl8r
-
+  name: tetra
 resources:
-  - tetra
+  - namespace.yaml
+  - helm-repo.yaml
+  - tetra.yaml

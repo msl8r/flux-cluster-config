@@ -3,7 +3,4 @@ kind: Kustomization
 metadata:
   name: tetra
 resources:
-  - namespace.yaml
-  - helm-repo.yaml
-  - tetra.yaml
-  - policy.yaml
+  - symlink-default.yaml
