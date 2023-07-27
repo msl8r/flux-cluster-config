@@ -6,3 +6,4 @@ resources:
   - namespace.yaml
   - helm-repo.yaml
   - tetra.yaml
+  - policy.yaml

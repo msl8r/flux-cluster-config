@@ -1,0 +1,25 @@
+apiVersion: cilium.io/v1alpha1
+kind: TracingPolicyNamespaced
+metadata:
+  name: "sys-symlink-passwd"
+  namespace: default
+spec:
+  kprobes:
+    - call: "sys_symlinkat"
+      syscall: true
+      args:
+        - index: 0
+          type: "string"
+        - index: 1
+          type: "int"
+        - index: 2
+          type: "string"
+      selectors:
+        - matchArgs:
+            - index: 0
+              operator: "Equal"
+              values:
+                - "/etc/passwd\0"
+          matchActions:
+            - action: Override
+              argError: -1
